@@ -20,7 +20,7 @@ namespace APIVerve.Examples
         private static readonly string API_URL = "https://api.apiverve.com/v1/readingtime";
 
         /// <summary>
-        /// Make a POST request to the Reading Time Calculator API
+        /// Make a GET request to the Reading Time Calculator API
         /// </summary>
         static async Task<JsonDocument> CallReadingTimeCalculatorAPI()
         {
@@ -29,13 +29,7 @@ namespace APIVerve.Examples
                 using var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("x-api-key", API_KEY);
 
-                // Request body
-                var requestBody &#x3D; new { text &#x3D; &quot;This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.&quot;, wpm &#x3D; 250 };
-
-                var jsonContent = JsonSerializer.Serialize(requestBody);
-                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-
-                var response = await client.PostAsync(API_URL, content);
+                var response = await client.GetAsync(API_URL);
 
                 // Check if response is successful
                 response.EnsureSuccessStatusCode();
