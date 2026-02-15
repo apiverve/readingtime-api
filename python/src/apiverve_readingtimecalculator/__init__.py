@@ -1,1 +1,3 @@
-from .apiClient import ReadingtimeAPIClient
+from .apiClient import ReadingtimeAPIClient, ReadingtimeAPIClientError
+
+__all__ = ['ReadingtimeAPIClient', 'ReadingtimeAPIClientError']
