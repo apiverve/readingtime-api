@@ -44,7 +44,10 @@ from apiverve_readingtimecalculator.apiClient import ReadingtimeAPIClient
 # Initialize the client with your APIVerve API key
 api = ReadingtimeAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.", "wpm": 250 }
+query = {
+    "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.",
+    "wpm": 250
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.", "wpm": 250 }
+query = {
+    "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.",
+    "wpm": 250
+}
 ```
 
 ###### Simple Request
@@ -125,7 +131,10 @@ from apiverve_readingtimecalculator.apiClient import ReadingtimeAPIClient, Readi
 
 api = ReadingtimeAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.", "wpm": 250 }
+query = {
+    "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.",
+    "wpm": 250
+}
 
 try:
     result = api.execute(query)
@@ -146,7 +155,10 @@ from apiverve_readingtimecalculator.apiClient import ReadingtimeAPIClient, Readi
 
 api = ReadingtimeAPIClient("[YOUR_API_KEY]")
 
-query = { "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.", "wpm": 250 }
+query = {
+    "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.",
+    "wpm": 250
+}
 
 try:
     result = api.execute(query)
@@ -180,7 +192,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_readingtimecalculator.apiClient import ReadingtimeAPIClient, ReadingtimeAPIClientError
 
-query = { "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.", "wpm": 250 }
+query = {
+    "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.",
+    "wpm": 250
+}
 
 # Using context manager ensures proper cleanup
 with ReadingtimeAPIClient("[YOUR_API_KEY]") as api:
@@ -206,7 +221,10 @@ from apiverve_readingtimecalculator.apiClient import ReadingtimeAPIClient
 # Enable debug mode
 api = ReadingtimeAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.", "wpm": 250 }
+query = {
+    "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.",
+    "wpm": 250
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -221,8 +239,12 @@ from apiverve_readingtimecalculator.apiClient import ReadingtimeAPIClient
 
 api = ReadingtimeAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.",
+    "wpm": 250
+}
+
 try:
-    query = { "text": "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.", "wpm": 250 }
     result = api.execute(query)
     print(result)
 finally:
