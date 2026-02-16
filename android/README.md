@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:readingtime-api:1.1.13'
+    implementation 'com.github.apiverve:readingtime-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ ReadingTimeCalculatorAPIClient client = new ReadingTimeCalculatorAPIClient("YOUR
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text", "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count.");
+    parameters.put("text", "This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.");
     parameters.put("wpm", 250);
 
     // Execute the request
