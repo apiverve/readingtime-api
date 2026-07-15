@@ -14,14 +14,21 @@ API_URL = 'https://api.apiverve.com/v1/readingtime'
 
 def call_readingtime_api():
     """
-    Make a GET request to the Reading Time Calculator API
+    Make a POST request to the Reading Time Calculator API
     """
     try:
+        # Request body
+        request_body &#x3D; {
+    &#x27;text&#x27;: &#x27;This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.&#x27;,
+    &#x27;wpm&#x27;: 250
+}
+
         headers = {
-            'x-api-key': API_KEY
+            'x-api-key': API_KEY,
+            'Content-Type': 'application/json'
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.post(API_URL, headers=headers, json=request_body)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
