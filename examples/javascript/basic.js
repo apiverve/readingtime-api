@@ -9,15 +9,23 @@ const API_KEY = process.env.APIVERVE_API_KEY || 'YOUR_API_KEY_HERE';
 const API_URL = 'https://api.apiverve.com/v1/readingtime';
 
 /**
- * Make a GET request to the Reading Time Calculator API
+ * Make a POST request to the Reading Time Calculator API
  */
 async function callReadingTimeCalculatorAPI() {
   try {
+    // Request body
+    const requestBody &#x3D; {
+    &quot;text&quot;: &quot;This is a sample article with multiple paragraphs. Reading time will be calculated based on word count. The average reading speed is 250 words per minute, which can be customized. This helps content creators provide accurate time estimates to their readers.&quot;,
+    &quot;wpm&quot;: 250
+};
+
     const response = await fetch(API_URL, {
-      method: 'GET',
+      method: 'POST',
       headers: {
-        'x-api-key': API_KEY
-      }
+        'x-api-key': API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody)
     });
 
     // Check if response is successful
