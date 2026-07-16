@@ -20,6 +20,6 @@ namespace APIVerve.API.ReadingTimeCalculator
         /// Words per minute reading speed
         /// </summary>
         [JsonProperty("wpm")]
-        public string Wpm { get; set; }
+        public int? Wpm { get; set; }
     }
 }
