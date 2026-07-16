@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net20;net35;net40;net45;netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
+    <TargetFrameworks>net20;net35;net40;net45;netstandard2.0;netstandard2.1;net6.0;net8.0</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>ReadingTimeCalculator</Title>
-    <Version>1.1.14</Version>
+    <Version>1.2.0</Version>
     <Authors>APIVerve</Authors>
     <Company>APIVerve</Company>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
@@ -17,7 +17,7 @@
     <Description>Reading Time Calculator estimates how long it will take to read a given text. It calculates reading time based on word count and customizable reading speed (WPM).</Description>
     <RepositoryUrl>https://github.com/apiverve/readingtime-api</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>api;rest;http;client;apiverve;wrapper;sdk;api;rest;http;client;apiverve;wrapper;sdk</PackageTags>
+    <PackageTags>reading time;word count;text analysis;reading speed;time estimate;api;rest;http;client;apiverve;wrapper;sdk</PackageTags>
     <Copyright>©2026 APIVerve. All Rights Reserved</Copyright>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
     <PackageIcon>favicon@128.png</PackageIcon>
