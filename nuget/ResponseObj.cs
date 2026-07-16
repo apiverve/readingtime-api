@@ -25,26 +25,41 @@ namespace APIVerve.API.ReadingTimeCalculator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("text_length")]
-        public long TextLength { get; set; }
+        public long? TextLength { get; set; }
 
         [JsonProperty("word_count")]
-        public long WordCount { get; set; }
+        public long? WordCount { get; set; }
 
         [JsonProperty("reading_time_minutes")]
-        public long ReadingTimeMinutes { get; set; }
+        public long? ReadingTimeMinutes { get; set; }
 
         [JsonProperty("reading_time_seconds")]
-        public long ReadingTimeSeconds { get; set; }
+        public long? ReadingTimeSeconds { get; set; }
 
         [JsonProperty("reading_time_text")]
         public string ReadingTimeText { get; set; }
 
         [JsonProperty("words_per_minute")]
-        public long WordsPerMinute { get; set; }
+        public long? WordsPerMinute { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
