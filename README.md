@@ -1,13 +1,13 @@
-# [Reading Time Calculator API](https://apiverve.com/marketplace/readingtime?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Reading Time Calculator API](https://apiverve.com/marketplace/readingtime?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
 Reading Time Calculator estimates how long it will take to read a given text. It calculates reading time based on word count and customizable reading speed (WPM).
 
 The Reading Time Calculator API provides a simple, reliable way to integrate reading time calculator functionality into your applications. Built for developers who need production-ready reading time calculator capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/readingtime?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/readingtime?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/readingtime?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/readingtime?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-POST-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -169,7 +169,7 @@ go get github.com/apiverve/readingtime-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Reading Time Calculator API](https://apiverve.com/marketplace/readingtime?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Reading Time Calculator API](https://apiverve.com/marketplace/readingtime?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/readingtime](https://docs.apiverve.com/ref/readingtime)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -199,11 +199,33 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Reading Time Calculator API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "text_length": 257,
+    "word_count": 41,
+    "reading_time_minutes": 1,
+    "reading_time_seconds": 10,
+    "reading_time_text": "1 min read",
+    "words_per_minute": 250
+  }
 }
 ```
 
@@ -211,7 +233,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Reading Time Calculator API](https://apiverve.com/marketplace/readingtime?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Reading Time Calculator API](https://apiverve.com/marketplace/readingtime?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/readingtime:
     post:
-      summary: Calculate Reading Time
+      summary: Reading Time Calculator
       description: Calculate estimated reading time for text content
       operationId: readingtime
       parameters: []
