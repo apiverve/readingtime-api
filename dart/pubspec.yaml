@@ -1,0 +1,16 @@
+name: apiverve_readingtime
+description: "Reading Time Calculator estimates how long it will take to read a given text. It calculates reading time based on word count and customizable reading speed (WPM)."
+version: 1.2.6
+homepage: https://apiverve.com/marketplace/readingtime?utm_source=dart&utm_medium=referral&utm_content=homepage
+repository: https://github.com/apiverve/readingtime-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
